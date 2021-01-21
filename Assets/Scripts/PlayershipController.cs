@@ -9,6 +9,7 @@ public class PlayershipController : MonoBehaviour
     [Tooltip("In m per sec")][SerializeField] float moveSpeed = 4f;
     [Tooltip("In meters")] [SerializeField] float xMovementRange = 7f;
     [Tooltip("In meters")] [SerializeField] float yMovementRange = 4f;
+    [SerializeField] GameObject gun;
     
     [Header("ScreenPosition")]
     [SerializeField] float positionPitchFactor = -5f;
@@ -39,10 +40,13 @@ public class PlayershipController : MonoBehaviour
         {
             Move();
             ProcessRotation();
+            FireGuns();
         }
 
 
     }
+
+
 
     private void ProcessRotation()
     {
@@ -77,6 +81,18 @@ public class PlayershipController : MonoBehaviour
         isControlEnabled = false;
         GameObject explode = Instantiate(explosion, transform.position, transform.rotation);
         FindObjectOfType<LevelLoader>().LoadCurrentScene();
+    }
+
+    private void FireGuns()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            gun.SetActive(true);
+        }
+        else
+        {
+            gun.SetActive(false);
+        }
     }
 
 
