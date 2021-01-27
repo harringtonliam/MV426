@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5009039697752363409}
   - component: {fileID: 2618291993765366823}
   - component: {fileID: 5031195045551503687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,13 +96,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 364248997749668891, guid: db4c1046e0825a1488191c11b07ca6a5, type: 3}
-  parentObject: {fileID: 0}
   score: 1
   health: 1
   particleColDamage: 1
-  rateOfFire: 3
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
   missilePrefab: {fileID: 5919804528882657552, guid: 8da81d4c49c05b548b7311de771f11ca, type: 3}
-  missileSpeed: 200
+  missileLaucherOffest: 5
 --- !u!114 &5031195045551503687
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,37 +4,47 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+        //Parameters
         [SerializeField] List<WaveConfig> waveConfigs;
         [SerializeField] int startingWave = 0;
-        [SerializeField] bool looping = false;
         [SerializeField] Transform enemyParentObject;
 
+    //Member variables
+    int[] waveTriggerCount;
 
-    // Start is called before the first frame update
-    //IEnumerator Start()
+    private void Start()
+    {
+        waveTriggerCount = new int[waveConfigs.Count];
+    }
+
+    //private IEnumerator SpawnAllWaves()
     //    {
-    //        //do
-    //        //{
-    //        //    yield return StartCoroutine(SpawnAllWaves());
-    //        //} while (looping);
-
+    //        for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
+    //        {
+    //            var currentWave = waveConfigs[waveIndex];
+    //            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave, waveIndex));
+    //        }
     //    }
 
 
-        private IEnumerator SpawnAllWaves()
+    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig, int waveIndex)
+    {
+
+        int maxNumberOfEnemies = waveConfig.GetMaxNumberOfEnemies();
+        int startNumberOfEnemies = waveConfig.GetStartNumberOfEnemies();
+        int numberOfEnemiesToSpawn = startNumberOfEnemies + waveTriggerCount[waveIndex];
+
+        if (numberOfEnemiesToSpawn >= maxNumberOfEnemies)
         {
-            for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
-            {
-                var currentWave = waveConfigs[waveIndex];
-                yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
-            }
+            numberOfEnemiesToSpawn = maxNumberOfEnemies;
+            waveTriggerCount[waveIndex] = 0;
         }
-
-
-        private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
+        else
         {
-        Debug.Log("SpawnAllEnemies number of enmies = " + waveConfig.GetNumberOfEnemies().ToString());
-            for (int i = 0; i < waveConfig.GetNumberOfEnemies(); i++)
+            waveTriggerCount[waveIndex]++;
+        }
+        Debug.Log("SpawnAllEnemiesInWave waveindex=" + waveIndex.ToString() + " maxnumber= " + maxNumberOfEnemies + " number to spawn=" + numberOfEnemiesToSpawn.ToString());
+        for (int i = 0; i < numberOfEnemiesToSpawn; i++)
             {
                 //TODO if you use an actuall enemy instead of prefab then this will fail if the actual ememy gets destroyed    
                 var newEnemy = Instantiate(waveConfig.GetEnemyPrefab(), waveConfig.GetWayPoints()[0].transform.position, waveConfig.GetWayPoints()[0].transform.rotation);
@@ -47,8 +57,8 @@ public class EnemySpawner : MonoBehaviour
 
     public void TriggerWave(int waveToTriggerIndex)
     {
-        Debug.Log("enemySpanwer trigger wave");
+
         var waveToTrigger = waveConfigs[waveToTriggerIndex];
-        StartCoroutine(SpawnAllEnemiesInWave(waveToTrigger));
+        StartCoroutine(SpawnAllEnemiesInWave(waveToTrigger, waveToTriggerIndex));
     }
 }

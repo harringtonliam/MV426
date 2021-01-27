@@ -43,7 +43,11 @@ public class DamageDealer : MonoBehaviour
     {
         if (explosionFX != null)
         {
-            Instantiate(explosionFX, transform.position, transform.rotation);
+           GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation);
+            if (transform.parent != null)
+            {
+                explosion.transform.parent = transform.parent;
+            }
         }
         Destroy(gameObject);
     }

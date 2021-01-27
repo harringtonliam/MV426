@@ -20,9 +20,7 @@ public class WaypointPathing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Waypointpathing start");
         waypoints = waypointCircuit.GetWayPoints();
-        Debug.Log("Waypointpathing start waypoints = " + waypoints.Count.ToString()) ;
         transform.position = waypoints[waypointIndex].transform.position;
     }
 

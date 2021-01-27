@@ -41,6 +41,23 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine("LoadSceneWithDelay");
     }
 
+    public void LoadStartScene()
+    {
+        GameSession gameSession = FindObjectOfType<GameSession>();
+        if (gameSession != null)
+        {
+            gameSession.ResetGame();
+        }
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadGameOverScene()
+    {
+        int gameOverSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+        sceneToLoad = gameOverSceneIndex;
+        StartCoroutine("LoadSceneWithDelay");
+    }
+
     public IEnumerator LoadSceneWithDelay()
     {
         yield return new WaitForSeconds(loadDelalySeconds);

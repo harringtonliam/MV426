@@ -22,8 +22,16 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.tag == WAVETRIGGERTAG)
         {
+            return;
+        }
+        if(other.gameObject.GetComponent<AmmoPickup>() != null)
+        {
+            PlayershipController playershipController = this.GetComponent<PlayershipController>();
+            AmmoPickup ammoPickup = other.gameObject.GetComponent<AmmoPickup>();
+            playershipController.AddAmmo(ammoPickup);
             return;
         }
         //StartDeathSequence();
@@ -31,7 +39,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void StartDeathSequence()
     {
-        Debug.Log("Start Death Sequence");
+
         this.GetComponent<PlayershipController>().OnPlayerDeath();
     }
 }

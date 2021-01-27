@@ -10,7 +10,8 @@ public class WaveConfig : MonoBehaviour
     [SerializeField] GameObject pathPrefab;
     [SerializeField] float timeBetweenSpawns = 0.5f;
     [SerializeField] float spawnRandomFactor = 0.3f;
-    [SerializeField] int numberOfEnemies = 5;
+    [SerializeField] int startNumberOfEnemies = 1;
+    [SerializeField] int maxNumberOfEnemies = 5;
     [SerializeField] float moveSpeed = 2f;
 
     public GameObject GetEnemyPrefab() { return enemyPrefab; }
@@ -25,6 +26,7 @@ public class WaveConfig : MonoBehaviour
     }
     public float GetTimeBetweenSpawns() { return timeBetweenSpawns; }
     public float GetSpawnRandomFactor() { return spawnRandomFactor; }
-    public int GetNumberOfEnemies() { return numberOfEnemies; }
+    public int GetStartNumberOfEnemies() { return startNumberOfEnemies; }
+    public int GetMaxNumberOfEnemies() { return maxNumberOfEnemies; }
     public float GetMoveSpeed() { return moveSpeed; }
 }

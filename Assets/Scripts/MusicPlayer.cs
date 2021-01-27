@@ -10,7 +10,7 @@ public class MusicPlayer : MonoBehaviour
 
     private void Awake()
     {
-        //Make teh music player a singletom
+        //Make the music player a singletom
         if (_instance == null)
         {
             _instance = this;
