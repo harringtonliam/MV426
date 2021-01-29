@@ -7,24 +7,24 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     //Parameters
-    [SerializeField] GameObject deathFX;
     [SerializeField] int score = 1;
-    [SerializeField] int health = 10;
     [SerializeField] int particleColDamage = 1;
     [Tooltip("In Seconds")] [SerializeField] float minTimeBetweenShots = 0.2f;
     [Tooltip("In Seconds")] [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject missilePrefab;
     [SerializeField] float missileLaucherOffest = 5f;
+    [SerializeField] int health = 1;
+    [SerializeField] GameObject deathFX;
 
 
     //member vaiables
     private float fireCountDown;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
-        AddNonTriggerBoxCollider();
 
         fireCountDown = UnityEngine.Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
     }
@@ -52,17 +52,41 @@ public class Enemy : MonoBehaviour
         health = health - particleColDamage;
         if (health <= 0)
         {
-            EnemyDeath();
+            Die();
         }
     }
 
-    private  void EnemyDeath()
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject enemyDeath = Instantiate(deathFX, transform.position, transform.rotation);
-        enemyDeath.transform.parent = transform.parent;
 
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        if (!damageDealer)
+        {
+            return;
+        }
+        ProcessHit(damageDealer);
+
+    }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        health -= damageDealer.GetDamage();
+        damageDealer.Hit();
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
         FindObjectOfType<GameSession>().AddScore(score);
 
+        if (deathFX != null)
+        {
+            Instantiate(deathFX, transform.position, transform.rotation);
+
+        }
         Destroy(gameObject);
     }
 

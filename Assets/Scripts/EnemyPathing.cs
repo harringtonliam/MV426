@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
 
-    [SerializeField] WaveConfig waveConfig;
+    WaveConfig waveConfig;
 
     //Member variables
     int waypointIndex = 0;

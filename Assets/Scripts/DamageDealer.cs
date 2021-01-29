@@ -22,24 +22,18 @@ public class DamageDealer : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    public int GetDamage()
     {
-        GameObject otherGameObject = other.gameObject;
-        if (otherGameObject.GetComponent<Health>() != null)
-        {
-            DealDamage(otherGameObject);
-        }
-
-        DestroyMissile();
+        return damage;
     }
 
 
-    private void DealDamage(GameObject otherGameObject)
+    public void Hit()
     {
-        otherGameObject.GetComponent<Health>().TakeDamage(damage);
+        DestroyDamageDealer();
     }
 
-    private void DestroyMissile()
+    private void DestroyDamageDealer()
     {
         if (explosionFX != null)
         {
