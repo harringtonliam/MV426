@@ -14,7 +14,7 @@ public class AmmoPad : MonoBehaviour
     private Messages messages;
 
     //Constants
-    const string MISSILEMESSAGETEXT = "Missiles Ready for Pickuo";
+    const string MISSILEMESSAGETEXT = "Missiles Ready for Pickup";
     const string CANNONMESSAGETEXT = "Cannon Rounds Ready for Pickup";
 
     // Start is called before the first frame update
@@ -34,6 +34,7 @@ public class AmmoPad : MonoBehaviour
         if (!pickupReady)
         {
             CreateAmmoPickup(ammoType);
+            
         }
     }
 

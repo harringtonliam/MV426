@@ -34,7 +34,7 @@ public class CollisionHandler : MonoBehaviour
             playershipController.AddAmmo(ammoPickup);
             return;
         }
-        //StartDeathSequence();
+        StartDeathSequence();
     }
 
     private void StartDeathSequence()

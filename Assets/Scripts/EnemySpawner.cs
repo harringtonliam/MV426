@@ -4,28 +4,21 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-        //Parameters
-        [SerializeField] List<WaveConfig> waveConfigs;
-        [SerializeField] int startingWave = 0;
-        [SerializeField] Transform enemyParentObject;
+    //Parameters
+    [SerializeField] List<WaveConfig> waveConfigs;
+    [SerializeField] Transform enemyParentObject;
+    [SerializeField] int mothershipWaveIndex = 6;
+    [SerializeField] int mothershipTriggerScore = 1000;
 
     //Member variables
     int[] waveTriggerCount;
+    GameSession gameSession;
 
     private void Start()
     {
         waveTriggerCount = new int[waveConfigs.Count];
+        gameSession = FindObjectOfType<GameSession>();
     }
-
-    //private IEnumerator SpawnAllWaves()
-    //    {
-    //        for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
-    //        {
-    //            var currentWave = waveConfigs[waveIndex];
-    //            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave, waveIndex));
-    //        }
-    //    }
-
 
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig, int waveIndex)
     {
@@ -43,7 +36,6 @@ public class EnemySpawner : MonoBehaviour
         {
             waveTriggerCount[waveIndex]++;
         }
-        Debug.Log("SpawnAllEnemiesInWave waveindex=" + waveIndex.ToString() + " maxnumber= " + maxNumberOfEnemies + " number to spawn=" + numberOfEnemiesToSpawn.ToString());
         for (int i = 0; i < numberOfEnemiesToSpawn; i++)
             {
                 //TODO if you use an actuall enemy instead of prefab then this will fail if the actual ememy gets destroyed    
@@ -57,8 +49,27 @@ public class EnemySpawner : MonoBehaviour
 
     public void TriggerWave(int waveToTriggerIndex)
     {
+        if(gameSession.TriggerScore >= mothershipTriggerScore && !IsMotherShipPresent())
+        {
+            waveToTriggerIndex = mothershipWaveIndex;
+        }
 
         var waveToTrigger = waveConfigs[waveToTriggerIndex];
+        if (IsMotherShipPresent() && waveToTrigger.GetDisableWhenMothershipSpawned())
+        {
+            return;
+        }
         StartCoroutine(SpawnAllEnemiesInWave(waveToTrigger, waveToTriggerIndex));
+    }
+
+    private bool IsMotherShipPresent()
+    {
+        bool mothershipPresent = false;
+        if(FindObjectOfType<EnemyMothership>() != null)
+        {
+            mothershipPresent = true;
+        }
+
+        return mothershipPresent;
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 669934054664519597}
   - component: {fileID: 664032257091805059}
   - component: {fileID: 654032292594637583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WingLeftTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 669934052942787435}
   - component: {fileID: 664032256339329713}
   - component: {fileID: 654032293945719475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WingRightTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 669934053273126735}
   - component: {fileID: 664032255722689695}
   - component: {fileID: 654032293028152573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThrusterLeftTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 669934056162686738}
   - component: {fileID: 664032256988546708}
   - component: {fileID: 654032260343925616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponLeftTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 669934052788054971}
   - component: {fileID: 664032257351514219}
   - component: {fileID: 654032292507101193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThrusterRightTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 669934055038767267}
   - component: {fileID: 664032256498777633}
   - component: {fileID: 654032293411189743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EngineRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 669934055516831547}
   - component: {fileID: 664032259094564859}
   - component: {fileID: 654032290312498039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 669934054558389009}
   - component: {fileID: 664032256454868371}
   - component: {fileID: 654032293086523485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EngineTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 669934054659036369}
   - component: {fileID: 664032256421329491}
   - component: {fileID: 654032293052954525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EngineLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 669934054368695317}
   - component: {fileID: 664032259809385229}
   - component: {fileID: 654032293403691287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponRightTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 515333817036869146}
   - component: {fileID: 515333817036869145}
   - component: {fileID: 6526861929239409469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyShip02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 3414048671126671837}
   - component: {fileID: 1876064386896636657}
   - component: {fileID: 1937126183836077112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WingRightBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 8529379280251280731}
   - component: {fileID: 3004284212407665063}
   - component: {fileID: 7029591347417561081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EngineBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 4505008228223040962}
   - component: {fileID: 1571805704574319297}
   - component: {fileID: 8290777920305265945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThrusterRightBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 4443230626960299191}
   - component: {fileID: 1697779789439669354}
   - component: {fileID: 6417132381444043548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThrusterLeftBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   - component: {fileID: 7356036711935066178}
   - component: {fileID: 5051417214314287408}
   - component: {fileID: 1585434201262806995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WingLeftBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 8463118293030727073}
   - component: {fileID: 2354512328665546438}
   - component: {fileID: 1456046021224580326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponRightBootom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1402,7 +1402,7 @@ GameObject:
   - component: {fileID: 2008610826572366761}
   - component: {fileID: 7488457453539007708}
   - component: {fileID: 8830849947057027854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponLeftBootom
   m_TagString: Untagged
   m_Icon: {fileID: 0}

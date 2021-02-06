@@ -103,6 +103,7 @@ public class Enemy : MonoBehaviour
     {
         Vector3 missileLauncher = transform.position;
         missileLauncher.y = missileLauncher.y + missileLaucherOffest;
+        missileLauncher.z = missileLauncher.z + missileLaucherOffest;
         GameObject missile = Instantiate(missilePrefab, missileLauncher, transform.rotation);
         missile.transform.parent = transform.parent;
         fireCountDown = UnityEngine.Random.Range(minTimeBetweenShots, maxTimeBetweenShots);

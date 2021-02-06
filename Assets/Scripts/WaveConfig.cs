@@ -13,6 +13,7 @@ public class WaveConfig : MonoBehaviour
     [SerializeField] int startNumberOfEnemies = 1;
     [SerializeField] int maxNumberOfEnemies = 5;
     [SerializeField] float moveSpeed = 2f;
+    [SerializeField] bool disableWhenMothershipSpawned = false;
 
     public GameObject GetEnemyPrefab() { return enemyPrefab; }
     public List<Transform> GetWayPoints()
@@ -29,4 +30,5 @@ public class WaveConfig : MonoBehaviour
     public int GetStartNumberOfEnemies() { return startNumberOfEnemies; }
     public int GetMaxNumberOfEnemies() { return maxNumberOfEnemies; }
     public float GetMoveSpeed() { return moveSpeed; }
+    public bool GetDisableWhenMothershipSpawned() { return disableWhenMothershipSpawned; }
 }

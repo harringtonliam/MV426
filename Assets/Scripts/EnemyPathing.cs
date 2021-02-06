@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyPathing : MonoBehaviour
 {
+    //Parameters
+    [SerializeField] bool destroyAtEnd = true;
 
     WaveConfig waveConfig;
 
@@ -40,7 +42,11 @@ public class EnemyPathing : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            if(destroyAtEnd)
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 

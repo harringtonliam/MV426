@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4799261451029631401}
   - component: {fileID: -6857933693721001639}
   - component: {fileID: 1276106052158907609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyShip01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wing_RIghtUp
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010946725240, guid: dd0d299dd6988e749907b7b8fe39768a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010228546632, guid: dd0d299dd6988e749907b7b8fe39768a, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -167,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrusterRight
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010311823264, guid: 23745f1af6ee9414f9286ac047b66e82, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010050181218, guid: 23745f1af6ee9414f9286ac047b66e82, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -228,6 +236,10 @@ PrefabInstance:
     - target: {fileID: 1000013867779562, guid: 59ef10e296326024dafffb41ced11b76, type: 3}
       propertyPath: m_Name
       value: 'Weapon_Right '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013867779562, guid: 59ef10e296326024dafffb41ced11b76, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4000012534615224, guid: 59ef10e296326024dafffb41ced11b76, type: 3}
       propertyPath: m_RootOrder
@@ -291,6 +303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010325142840, guid: 170847126cb058a4692a754a819e0a47, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011438151066, guid: 170847126cb058a4692a754a819e0a47, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -352,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 1000012174660792, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
       propertyPath: m_Name
       value: EngineTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012174660792, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4000010987358744, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
       propertyPath: m_RootOrder
@@ -415,6 +435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EngineLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012174660792, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010987358744, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -476,6 +500,10 @@ PrefabInstance:
     - target: {fileID: 1000012174660792, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
       propertyPath: m_Name
       value: EngineRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012174660792, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4000010987358744, guid: 843b17ec9ed54754da9597b5bfa008ad, type: 3}
       propertyPath: m_RootOrder
@@ -539,6 +567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WingLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010590945616, guid: 7ba836a4e34305a4ba0a9d20da5d4735, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011395859806, guid: 7ba836a4e34305a4ba0a9d20da5d4735, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -600,6 +632,10 @@ PrefabInstance:
     - target: {fileID: 1000012099897084, guid: 13650af5705351c4b923af505d2e0256, type: 3}
       propertyPath: m_Name
       value: Weapon_Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012099897084, guid: 13650af5705351c4b923af505d2e0256, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4000013174827142, guid: 13650af5705351c4b923af505d2e0256, type: 3}
       propertyPath: m_RootOrder
@@ -663,6 +699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrusterLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010311823264, guid: 23745f1af6ee9414f9286ac047b66e82, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010050181218, guid: 23745f1af6ee9414f9286ac047b66e82, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -725,6 +765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WingRight
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010946725240, guid: dd0d299dd6988e749907b7b8fe39768a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010228546632, guid: dd0d299dd6988e749907b7b8fe39768a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -786,6 +830,10 @@ PrefabInstance:
     - target: {fileID: 1000010590945616, guid: 7ba836a4e34305a4ba0a9d20da5d4735, type: 3}
       propertyPath: m_Name
       value: Wing_LeftUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010590945616, guid: 7ba836a4e34305a4ba0a9d20da5d4735, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4000011395859806, guid: 7ba836a4e34305a4ba0a9d20da5d4735, type: 3}
       propertyPath: m_RootOrder

@@ -7,8 +7,16 @@ using UnityEngine.UI;
 public class GameSession : MonoBehaviour
 {
 
+    //Properties
+    public int TriggerScore
+    {
+        get { return triggerScore; }
+        set { triggerScore = value;  }
+    }
 
+    //member variables
     int currentScore = 0;
+    int triggerScore = 0;
 
     private static GameSession _instance;
 
@@ -46,6 +54,7 @@ public class GameSession : MonoBehaviour
     public void AddScore(int score)
     {
         currentScore = currentScore + score;
+        triggerScore = triggerScore + score;
         DisplayScore();
 
     }
@@ -61,7 +70,10 @@ public class GameSession : MonoBehaviour
 
     public void ResetGame()
     {
-        Debug.Log("Reset Game!!!!");
+
         currentScore = 0;
+        triggerScore = 0;
     }
+
+    
 }

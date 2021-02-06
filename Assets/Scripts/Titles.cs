@@ -12,7 +12,9 @@ public class Titles : MonoBehaviour
     {
         titleText = GetComponent<Text>();
         titleText.text = string.Empty;
-        StartCoroutine("DisplayTitle");
+
+        StartCoroutine(DisplayTitle());
+
     }
 
     // Update is called once per frame
@@ -24,7 +26,8 @@ public class Titles : MonoBehaviour
     IEnumerator DisplayTitle()
     {
 
-        yield return new WaitForSeconds(0.5f);
-        titleText.text = "MV426";
+        yield return new WaitForSeconds(    1f);
+        titleText.text = "MV462";
+
     }
 }

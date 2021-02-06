@@ -54,7 +54,7 @@ public class PlayershipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cannon.SetActive(false);
+        SetCannonActive(false);
         ammoDisplay = FindObjectOfType<AmmoDisplay>();
         DisplayAmmoLevels();
 
@@ -144,7 +144,7 @@ public class PlayershipController : MonoBehaviour
         {
             if (cannonAmmo > 0)
             {
-                cannon.SetActive(true);
+                SetCannonActive(true);
 
             }
 
@@ -152,7 +152,7 @@ public class PlayershipController : MonoBehaviour
         }
         if (Input.GetButtonUp("Fire1"))
         {
-            cannon.SetActive(false);
+            SetCannonActive(false);
             StopCoroutine(cannonFireCoroutine);
             audioSource.Stop();
         }
@@ -173,12 +173,18 @@ public class PlayershipController : MonoBehaviour
             }
             else
             {
-                cannon.SetActive(false);
+                SetCannonActive(false);
             }
             yield return new WaitForSeconds(cannonFiringPeriod);
 
         }
 
+    }
+
+    private void SetCannonActive(bool isActive)
+    {
+        var emmissionModule = cannon.GetComponent<ParticleSystem>().emission;
+        emmissionModule.enabled = isActive;
     }
 
     private void FireMissiles()
